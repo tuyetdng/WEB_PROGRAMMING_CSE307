@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function changeLink() {
+        var lista = document.getElementsByTagName("a");
+
+        for (var i = 0; i < lista.length; i++) {
+            lista[i].href = "https://www.w3schools.com/js/default.asp";
+        }
+
+    }
+
+</script>
+
+<body>
+    <p>Problem 1. Replace all href values</p>
+    <a href="#" >Website 1</a>
+    <a href="#">Website 2</a>
+    <a href="#">Website 3</a>
+
+</body>
+
+</html>

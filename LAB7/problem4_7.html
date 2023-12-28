@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    img:hover {
+        /* border: 1px solid #777; */
+        width: 250px;
+        height: 350px;
+    }
+</style>
+
+<body>
+    <h2><strong>Tabbed Image Gallery</strong></h2>
+    <center>
+        <div class="imgk">
+            <img src="img_Practice3/Davinci.png" onclick="myFunction(this);" width="200px" height="300px">
+            <img src="img_Practice3/EnglishForTech.jpg" onclick="myFunction(this);" width="200px" height="300px">
+            <img src="img_Practice3/harrypotter.png" onclick="myFunction(this);" width="200px" height="300px">
+            <img src="img_Practice3/book.jpg" onclick="myFunction(this);" width="200px" height="300px">
+        </div>
+
+        <!-- Expand image -->
+        <div class="container">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:500px; height: 600px;">
+            <!-- <div id="imgtext"></div> -->
+        </div>
+    </center>
+    <script>
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            // imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

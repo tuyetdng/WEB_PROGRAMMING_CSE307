@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check() {
+            const n = parseInt(document.getElementById('in').value);
+            let count = 0;
+
+            if (!n) {
+                document.getElementById("out").innerHTML = "Please enter a valid positive integer";
+            } else {
+                document.getElementById("out").innerHTML = "";
+                for (let i = 1; i <= n; i++) {
+                    if ((n % i) == 0) {
+                        count++;
+                    }
+
+                }
+                if (count === 2) {
+                    document.getElementById("out").innerHTML = "true";
+                } else {
+                    document.getElementById("out").innerHTML = "false";
+                }
+            }
+            // document.getElementById("out").innerHTML = str;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Numbers from 1 to N</h2>
+    <label for="in">Enter a positive integer N:</label>
+    <input type="text" id='in'>
+    <input type="button" value="Check Prime" onclick="check()">
+    <p id="out"></p>
+</body>
+
+</html>

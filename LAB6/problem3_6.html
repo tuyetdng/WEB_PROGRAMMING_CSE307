@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Show() {
+            let list = [
+                {
+                    "title": "The Alchemist",
+                    "image": "https://novaedu.vn/uploads/news/2021_01/ai_cung_giao_tiep_nhung_may_nguoi_ket_noi.jpg",
+                    "price": 182.700
+                },
+                {
+                    "title": "Learning How to learn",
+                    "image": "https://barbaraoakley.com/wp-content/uploads/2018/02/LHTL.jpg",
+                    "price": 251.100
+                },
+                {
+                    "title": "Thinking Fast and Slow",
+                    "image": "https://m.media-amazon.com/images/I/61fdrEuPJwL._AC_UF1000,1000_QL80_.jpg",
+                    "price": 299.700
+                },
+            ];
+
+            for (let i = 0; i < list.length; i++) {
+                document.getElementById('res').innerHTML +=
+                    ` <div style ='flex:30%' border:'1 solid'>
+                    <p id='title' style='text-align: center;'><strong>${list[i].title}</strong></p>
+                       <center> <img id='img' width=200'
+                            src='${list[i].image}' /></center>
+                        <p id='price' style='text-align: center;'><strong>${list[i].price} VND</strong></p>
+                    </div>`;
+            }
+            // sort by price
+            list.sort(function (x, y) {
+                return x.price - y.price;
+            });
+            console.log("Sort by price");
+            console.table(list);
+
+        }
+
+
+    </script>
+</head>
+
+<body onload="Show()">
+    <div id='res' style="display: flex;"></div>
+</body>
+
+</html>

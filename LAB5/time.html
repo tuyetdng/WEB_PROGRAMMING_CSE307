@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DateTime</title>
+</head>
+
+<body>
+    <p id="timezone"></p>
+    <p id="time"></p>
+    <p span style="color: blue;" id="daytime"></p>
+
+    <script>
+        
+        const d = new Date();
+        const current_time = "Now: " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        document.getElementById("timezone").innerHTML = d;
+        document.getElementById("time").innerHTML = current_time;
+
+        // string current daytime
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        const monthsOfYear = ["January", "Frebruary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const dayOfWeek = daysOfWeek[d.getDay()];
+        const month = monthsOfYear[d.getMonth()];
+        const day = d.getDate();
+        const year = d.getFullYear();
+
+        const formattedDate = `Today: ${dayOfWeek}, ${month}, ${day}, ${year}`;
+        document.getElementById("daytime").innerHTML = formattedDate;
+
+    </script>
+</body>
+
+</html>

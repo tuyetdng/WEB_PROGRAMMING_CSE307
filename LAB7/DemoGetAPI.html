@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        var products;
+        async function GetData() {
+            await axios({
+                method: 'get',
+                url: 'https://dummyjson.com/products',
+                responseType: 'json'
+            })
+                .then(function (response) {
+                  products = response.data.products;
+                 // console.log(products);
+                });
+        }
+        async function RenderData()
+        {
+            await GetData();
+            var str ='';
+            for(i = 0;i< products.length;i++)
+            {
+                console.log(products[i]);
+                str += `<div> ${products[i].title} </d>`;
+                str += `<img width ='150px' src='${products[i].thumbnail}'/>`;
+            }
+            document.getElementById('result').innerHTML = str;
+        } 
+    </script>
+</head>
+
+<body>
+    <div id ='result'></div>
+    <input type="button" value="Get data" onclick="RenderData()" />
+</body>
+
+</html>

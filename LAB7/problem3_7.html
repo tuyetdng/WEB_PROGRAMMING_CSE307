@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function Change() {
+        document.querySelector(".example").style.backgroundColor = "yellow";
+        document.querySelector(".example").style.border = "1px solid green";
+
+        const lista = document.querySelectorAll(".exampleBorder");
+        for (let i = 0; i < lista.length; i++) {
+            lista[i].style.border = "1px solid red";
+        }
+        const listtitle = document.querySelectorAll(".title");
+        for (let i = 0; i < listtitle.length; i++) {
+            listtitle[i].style.color = "orange";
+        }
+
+
+
+
+    }
+</script>
+
+<body>
+    <p style="background-color: aquamarine; border: 1px solid;" class="example">This is the first paragraph with class
+        "example".</p>
+    <p style="background-color: aquamarine; border: 1px solid;" class="example">This is another paragraph</p>
+    <p class="example">This is a regular paragraph</p>
+    <a href="#" class="exampleBorder">Link with target attribute</a><br>
+    <a href="#" class="exampleBorder">Another link with target attribute</a>
+    <h1 style="color: purple;" class="title">Title 1</h1>
+    <h2 style="color: purple;" class="title">Title 2</h2>
+    <input type="button" value="Change" onclick="Change()">
+
+</body>
+
+</html>

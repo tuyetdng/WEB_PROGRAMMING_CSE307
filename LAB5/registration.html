@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <!-- <style>
+        form {
+            border: 2px solid lightseagreen;
+            padding: 20px;
+            width: 500px;
+        }
+    </style> -->
+</head>
+
+<body>
+    <form method="post" action="#" name="dangky">
+        <center>
+            <header><strong>MEMBER REGISTRATION</strong></header>
+        </center>
+        <fieldset>
+            <legend><strong>Personal information</strong></legend>
+
+            <table>
+                <colgroup>
+                    <col style="width: 30%;">
+                    <col style="width: 70%;">
+                </colgroup>
+                <tr>
+                    <td><label for="Fullname">Full name: </label></td>
+                    <td><input type="text" name="Fullname" id="Fullname"></td>
+                </tr>
+                <tr>
+                    <td><label for="Birthday">Birthday: </label></td>
+                    <td>
+                        <select id="Birthday" name="Birthday">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+
+                        <label for="Month">Month:</label>
+                        <select id="Month" name="Month">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <label for="Year">Year:</label>
+                        <input type="text" name="Year" id="Year" style="width: 90px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Gender">Gender:</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="Gender" id="Gender" value="Nam">
+                        <label for="Gender">Male</label>
+                        <input type="radio" name="Gender" id="Gender" value="Nu">
+                        <label for="Gender">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="Address">Address:</label>
+                    </td>
+                    <td><textarea name="Address" id="Address" cols="35" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="Telephone">Telephone: </label></td>
+                    <td><input type="text" name="Telephone" id="Telephone" style="width: 270px;"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email: </label></td>
+                    <td><input type="text" name="email" id="email" style="width: 270px;" required="required"
+                            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Credentials</strong></legend>
+            <table>
+                <colgroup>
+                    <col style="width: 30%;">
+                    <col style="width: 70%;">
+                </colgroup>
+                <tr>
+                    <td><label for="Username">Username: </label></td>
+                    <td><input type="text" name="Username" id="Username" style="width: 200px;" required="required"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password: </label></td>
+                    <td><input type="password" name="password" id="password" style="width: 200px;" required="required">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ConfirmPassword">Confirm Password: </label></td>
+                    <td><input type="password" name="ConfirmPassword" id="ConfirmPassword" style="width: 200px;"
+                            required="required"></td>
+                </tr>
+
+            </table>
+        </fieldset>
+        <center>
+            <button type="submit">Login</button>
+            <button type="reset">Cancel</button>
+        </center>
+    </form>
+
+
+</body>
+
+</html>

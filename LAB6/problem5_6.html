@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function print() {
+            const n = parseInt(document.getElementById('in').value);
+            if (!n) {
+                document.getElementById("out").innerHTML = "Please enter a valid positive integer";
+            } else {
+                document.getElementById("out").innerHTML ="";
+                for (let i = 1; i <= n; i++) {
+                    document.getElementById("out").innerHTML += "   " + i;
+
+                }
+            }
+            // document.getElementById("out").innerHTML = str;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Numbers from 1 to N</h2>
+    <label for="in">Enter a positive integer N:</label>
+    <input type="text" id='in'>
+    <input type="button" value="Print Numbers" onclick="print()">
+    <p id="out"></p>
+</body>
+
+</html>

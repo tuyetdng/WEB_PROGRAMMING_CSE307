@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var list = [
+            {
+                id: 1,
+                name: 'Laptop',
+                Quantity: 5,
+                price: 1200,
+                image: "https://i.pinimg.com/236x/05/17/37/0517379aac07936adf09dd63e44ef8e3.jpg",
+            },
+            {
+                id: 2,
+                name: 'Phone',
+                Quantity: 10,
+                price: 800,
+                image: "https://i.pinimg.com/236x/b4/87/07/b487072b46cd2c9f22a9756015cd0fc9.jpg",
+            },
+            {
+                id: 3,
+                name: 'Tablet',
+                Quantity: 8,
+                price: 500,
+                image: "https://i.pinimg.com/564x/6b/02/65/6b0265e55245f3f7aacb9ea0828fa645.jpg",
+            },
+        ];
+
+        function SortByName() {
+            list.sort(function (x, y) {
+                let a = x.name.toUpperCase(),
+                    b = y.name.toUpperCase();
+                // return a == b ? 0 : a > b ? 1 : -1;
+
+                if (a > b)
+                    return -1;
+                if (a < b)
+                    return 1;
+                return 0;
+            });
+            console.log("Sort by Name");
+            console.table(list);
+        }
+
+        function PrintList() {
+            for (let i = 0; i < list.length; i++) {
+                document.getElementById('res').innerHTML +=
+                    ` <div style ='flex:30%' border:'1 solid'>
+                    <p id='id' style='text-align: center;'><strong>ID: ${list[i].id}</strong></p>
+                    <p id='name' style='text-align: center;'><strong>Name: ${list[i].name}</strong></p>
+                    <p id='quantity' style='text-align: center;'><strong>Quantity: ${list[i].Quantity}</strong></p>
+                    <p id='price' style='text-align: center;'><strong>Price: ${list[i].price} VND</strong></p>
+                       <center> <img id='img' width=200'
+                            src='${list[i].image}' /></center>
+                    </div>`;
+            }
+        }
+        function addAtTail() {
+            let string = {
+                id: 4,
+                name: 'Smartwatch',
+                Quantity: 15,
+                price: 200,
+                image: "https://i.pinimg.com/564x/20/29/d5/2029d51d3f51b028d6f0d4b7bab3c44d.jpg",
+            }
+            list.push(string);
+        }
+        function addAtFirst() {
+            let string = {
+                id: 5,
+                name: 'Smartwatch',
+                Quantity: 20,
+                price: 400,
+                image: "https://i.pinimg.com/564x/20/29/d5/2029d51d3f51b028d6f0d4b7bab3c44d.jpg",
+            };
+            list.unshift(string);
+        }
+
+     
+        function removeById() {
+            let strid = document.getElementById('in').value;
+
+            for (let i = 0; i < list.length; i++) {
+                if (list[i].id == strid) {
+                    const removed = list.splice(i, 1);
+                    console.log(list);
+                    break;
+                } else {
+                    console.log("Null");
+                }
+            }
+        }
+
+        function editById() {
+            let strid = document.getElementById('in').value;
+            let string = {
+                id: 5,
+                name: 'Camera',
+                Quantity: 15,
+                price: 250,
+                image: "https://i.pinimg.com/564x/13/f4/47/13f447b12d02019d1c5feeeb6165fe80.jpg",
+            }
+            for (let i = 0; i < list.length; i++) {
+                if (list[i].id == strid) {
+                    list[i] = a = string
+                    console.log(list);
+                    break;
+
+                } else {
+                    console.log("Null");
+                }
+            }
+        }
+           //Search By Name
+           let searchByName = str => list.filter(({ name }) => name.startsWith(str));
+           console.log(searchByName('Laptop'))
+    </script>
+</head>
+
+<body>
+    <input type="text" id="in">
+    <input type="button" value="Print List" onclick="PrintList()">
+    <input type="button" value="Sort By Name" onclick="SortByName()">
+    <input type="button" value="Add to head list" onclick="addAtFirst()">
+    <input type="button" value="Add to end list" onclick="addAtTail()">
+    <input type="button" value="Search by Name" onclick="searchByName()">
+    <input type="button" value="Remove by ID" onclick="removeById()">
+    <input type="button" value="Edit by ID" onclick="editById()">
+
+    <div id='res' style="display: flex;"></div>
+
+
+</body>
+
+</html>

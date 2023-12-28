@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check() {
+            let text = document.getElementById('in').value;
+            const array = text.split(",");
+            let min = array[1];
+            let max = array[1];
+            let sum = parseInt(0);
+            let avg = parseInt(0);
+
+            for (let i = 0; i < array.length; i++) {
+                // document.writeln(array[i]);
+
+                if (array[i] >= max) {
+                    max = array[i];
+                }
+                if (array[i] <= min) {
+                    min = array[i];
+                }
+                sum += parseFloat(array[i]);
+            }
+            avg = parseFloat(sum / array.length);
+            // document.writeln(max);
+            // document.writeln(min);
+            // document.writeln(sum);
+            // document.writeln(avg);
+
+
+            document.getElementById("max").innerHTML = "Max: " + parseFloat(max);
+            document.getElementById("min").innerHTML = "Min: " +parseFloat(min);
+            document.getElementById("sum").innerHTML = "Sum: "+ parseFloat(sum);
+            document.getElementById("avg").innerHTML = "Avg: " + avg;
+
+        }
+    </script>
+</head>
+
+<body>
+    <h2>MMSA of N Numbers</h2>
+    <label for="in">Enter numbers separated by commas:</label>
+    <input type="text" id='in'>
+    <input type="button" value="Calculate MMSA" onclick="check()">
+    <p id="min"></p>
+    <p id="max"></p>
+    <p id="sum"></p>
+    <p id="avg"></p>
+
+</body>
+
+</html>

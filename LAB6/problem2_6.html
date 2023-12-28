@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeString() {
+            let res = document.getElementById("p0").outerText;
+            document.getElementById("p1").innerHTML = parseInt(res);
+            document.getElementById("p2").innerHTML = parseFloat(res);
+            document.getElementById("p3").innerHTML = Number(res);
+            document.getElementById("p4").innerHTML = +(res);
+            document.getElementById("p5").innerHTML = (res) ^ 0;
+
+            let res1 = document.getElementById("p01").outerText;
+            document.getElementById("p11").innerHTML = parseInt(res1);
+            document.getElementById("p21").innerHTML = parseFloat(res1);
+            document.getElementById("p31").innerHTML = Number(res1);
+            document.getElementById("p41").innerHTML = +(res1);
+            document.getElementById("p51").innerHTML = (res1) ^ 0;
+
+            let res2 = document.getElementById("p02").outerText;
+            document.getElementById("p12").innerHTML = parseInt(res2);
+            document.getElementById("p22").innerHTML = parseFloat(res2);
+            document.getElementById("p32").innerHTML = Number(res2);
+            document.getElementById("p42").innerHTML = +(res2);
+            document.getElementById("p52").innerHTML = (res2) ^ 0;
+
+            let res3 = document.getElementById("p03").outerText;
+            document.getElementById("p13").innerHTML = parseInt(res3);
+            document.getElementById("p23").innerHTML = parseFloat(res3);
+            document.getElementById("p33").innerHTML = Number(res3);
+            document.getElementById("p43").innerHTML = +(res3);
+            document.getElementById("p53").innerHTML = (res3) ^ 0;
+
+            let res4 = document.getElementById("p04").value;
+            document.getElementById("p14").innerHTML = parseInt(res4);
+            document.getElementById("p24").innerHTML = parseFloat(res4);
+            document.getElementById("p34").innerHTML = Number(res4);
+            document.getElementById("p44").innerHTML = +(res4);
+            document.getElementById("p54").innerHTML = (res4) ^ 0;
+
+            let res5 = document.getElementById("p05").outerText;
+            document.getElementById("p15").innerHTML = parseInt(res5);
+            document.getElementById("p25").innerHTML = parseFloat(res5);
+            document.getElementById("p35").innerHTML = Number(res5);
+            document.getElementById("p45").innerHTML = +(res5);
+            document.getElementById("p55").innerHTML = (res5) ^ 0;
+
+        }
+    </script>
+</head>
+
+<body>
+    <table border="1" style="width: 800px;">
+        <tr>
+            <th>str</th>
+            <th>parseInt(str)</th>
+            <th>parseFloat(str)</th>
+            <th>Number(str)</th>
+            <th>+str</th>
+            <th>str|0</th>
+        </tr>
+        <tr>
+            <td>
+                <p id="p0">1234</p>
+            </td>
+            <td>
+                <p id="p1">?</p>
+            </td>
+            <td>
+                <p id="p2">?</p>
+            </td>
+            <td>
+                <p id="p3">?</p>
+            </td>
+            <td>
+                <p id="p4">?</p>
+            </td>
+            <td>
+                <p id="p5">?</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="p01">1234abc</p>
+            </td>
+            <td>
+                <p id="p11">?</p>
+            </td>
+            <td>
+                <p id="p21">?</p>
+            </td>
+            <td>
+                <p id="p31">?</p>
+            </td>
+            <td>
+                <p id="p41">?</p>
+            </td>
+            <td>
+                <p id="p51">?</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="p02">0.15</p>
+            </td>
+            <td>
+                <p id="p12">?</p>
+            </td>
+            <td>
+                <p id="p22">?</p>
+            </td>
+            <td>
+                <p id="p32">?</p>
+            </td>
+            <td>
+                <p id="p42">?</p>
+            </td>
+            <td>
+                <p id="p52">?</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="p03">3.14ivan</p>
+            </td>
+            <td>
+                <p id="p13">?</p>
+            </td>
+            <td>
+                <p id="p23">?</p>
+            </td>
+            <td>
+                <p id="p33">?</p>
+            </td>
+            <td>
+                <p id="p43">?</p>
+            </td>
+            <td>
+                <p id="p53">?</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="p04">Infinity</p>
+            </td>
+            <td>
+                <p id="p14">?</p>
+            </td>
+            <td>
+                <p id="p24">?</p>
+            </td>
+            <td>
+                <p id="p34">?</p>
+            </td>
+            <td>
+                <p id="p44">?</p>
+            </td>
+            <td>
+                <p id="p54">?</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="p05">99999999999999999999</p>
+            </td>
+            <td>
+                <p id="p15">?</p>
+            </td>
+            <td>
+                <p id="p25">?</p>
+            </td>
+            <td>
+                <p id="p35">?</p>
+            </td>
+            <td>
+                <p id="p45">?</p>
+            </td>
+            <td>
+                <p id="p55">?</p>
+            </td>
+        </tr>
+    </table>
+    <center>
+        <input type="button" value="Change" onclick="changeString()">
+    </center>
+</body>
+
+</html>

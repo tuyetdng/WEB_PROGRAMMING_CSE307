@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #1c87c9;
+            color: #ffffff;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #666666;
+        }
+    </style>
+</head>
+<script>
+    var user;
+    async function GetData() {
+        // await axios({
+        //     method: 'get',
+        //     url: 'https://fakestoreapi.com/users',
+        //     responseType: 'json'
+        // })
+        //     .then(function (response) {
+        //         user = response.data.user;
+        //         console.log(user);
+        //     });
+
+        var url = 'https://fakestoreapi.com/users'
+        await fetch(url)
+            .then((res) => res.json())
+            .then((json) => user = json);
+        // console.log(user);
+        // RenderData(user);
+    }
+
+    // async function RenderData() {
+    //     await GetData();
+    //     var strEmail = '';
+    //     var strUsername = '';
+    //     var strfirstname = '';
+    //     var strlastname = '';
+    //     var strPhone = '';
+    //     var strPassword = '';
+    //     var strAddress = '';
+    //     for (i = 0; i < user.length; i++) {
+    //         console.log(user[i]);
+    //         str += `<div> ${user[i].id} </d>`;
+    //         str += `<div> ${user[i].email} </d>`;
+    //         str += `<div> ${user[i].username} </d>`;
+    //         str += `<div> ${user[i].name.firstname} </d>`;
+    //         str += `<div> ${user[i].name.lastname} </d>`;
+    //         str += `<div> ${user[i].phone} </d>`;
+    //         str += `<div> ${user[i].password} </d>`;
+    //         str += `<div> ${user[i].address.city} </d>`;
+
+    //     }
+
+    // }
+    function addTable() {
+
+        for (var i = 0; i < user.length; i++) {
+            var rowId = "row" + (i + 1);
+            var row = document.getElementById(rowId);
+            console.log(user[i].address);
+            var firstname = user[i]['name']['firstname'];
+            var lastname = user[i]['name']['lastname'];
+            var address = user[i]['address']['number'] + "-" +user[i]['address']['street'] + "-" +user[i]['address']['city'];
+
+            row.innerHTML = "<td>" + user[i]['email'] + "</td><td>" + user[i]['username'] + "</td><td>" + user[i]['password'] + "</td><td>" + firstname + "</td><td>" + lastname + "</td><td>" + user[i]['phone'] + "</td><td>" + address + "</td>";
+        }
+    }
+
+
+
+
+
+
+</script>
+
+<body onload="GetData()">
+
+    <input type="button" value="Get data" onclick="addTable()" />
+    <!-- <input type="button" value="Add data" onclick="addTable()" /> -->
+
+    <table id="myTable" style="border: 1px solid #000;">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="row1"></tr>
+            <tr id="row2"></tr>
+            <tr id="row3"></tr>
+            <tr id="row4"></tr>
+            <tr id="row5"></tr>
+            <tr id="row6"></tr>
+            <tr id="row7"></tr>
+            <tr id="row8"></tr>
+            <tr id="row9"></tr>
+            <tr id="row10"></tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+nav {
+    clear: both;
+    background-color: rgb(82, 255, 160);
+    border: 1px solid #fff;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+
+}
+
+nav .text {
+    text-align: center;
+    color: coral;
+}
+
+header div#dn a:hover {
+    color: #900;
+}
+
+div#layout {
+    border: 1px solid #a3a2a3;
+    margin: 20px auto;
+    width: 900px;
+}
+
+div.hLeft {
+    float: left;
+}
+
+div.hRight {
+    display: inline;
+    float: left
+    /* margin-top: 100px; */
+}
+
+/*thêm đường border ở giữa các li*/
+/* div.hLeft ul.hNav {
+    display: inline;
+    border-right: solid 1px #333;
+    padding: 0 5px;
+} */
+
+div.hLeft ul.hNav li {
+    display: inline;
+    border-right: solid 1px #333;
+    padding: 0 5px;
+}
+
+div.hLeft ul.hNav li a {
+    text-decoration: none;
+}
+
+/* xử lý border thừa */
+div.hLeft ul.hNav li.last {
+    border-right: none;
+    padding-right: 0;
+}
+
+/*right side*/
+div.hRight ul.hButton {
+    text-align: right;
+}
+
+div.hRight ul.hButton li {
+    display: inline;
+}
+
+div.hRight ul.hNav {
+    text-align: right;
+}
+
+header div.hRight a {
+    text-decoration: none;
+    display: inline;
+    border-right: solid 1px #333;
+    padding: 0 5px;
+}
+
+header div.hRight a.last {
+    border-right: none;
+    padding-right: 0;
+}
+
+div.hRight ul.hNav li {
+    display: inline;
+}
+
+div.hRight ul.hNav li a {
+    text-decoration: none;
+}
+
+
+div.hRight ul.hNav li.last {
+    border-right: none;
+    padding-right: 0;
+}
+
+
+div#gNav {
+    clear: both;
+}
+
+div#body {
+    background-color: rgb(245, 243, 243);
+    clear: both;
+    width: auto;
+    border: 1px solid cadetblue;
+    margin: auto;
+    box-shadow: 1px 2px #888;
+}
+
+aside#left,
+aside#right,
+section {
+    display: table-cell;
+    vertical-align: top;
+    padding: 2px;
+
+}
+
+aside#left {
+    width: 20%;
+}
+
+aside#right {
+    width: 20%;
+
+
+}
+
+aside#left p {
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+aside#left div {
+    border: 1px solid blue;
+}
+
+aside#left div ul li {
+    margin-left: 30px;
+}
+
+aside#left div ul li a {
+    text-decoration: none;
+}
+
+aside#left div ul.list {
+    list-style-type: square;
+}
+
+aside#left div ul li a:hover {
+    color: rgb(76, 65, 148);
+}
+
+/* right aside */
+aside#right h3 {
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+aside#right div {
+    border: 1px solid blue;
+}
+
+aside#right div#bestseller p a img {
+    width: 70px;
+    height: 75px;
+}
+
+
+aside#right div#bestseller p a {
+    text-decoration: none;
+}
+
+
+aside#right div#bestseller p a:hover {
+    color: rgb(76, 65, 148);
+}
+
+aside#right div#linkweb {
+    height: 80px;
+    text-align: center;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+aside#right div#statistics {
+    color: red;
+}
+
+section div.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section h3 {
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    text-align: center;
+
+}
+
+section div.product-box {
+    border-radius: 5px;
+    width: 250px;
+    border: 1px solid blue;
+    background-color: rgb(164, 206, 248);
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+
+}
+
+section div.product-box p.namebook {
+    text-align: center;
+
+}
+
+section div.product-box p.namebook a {
+    color: darkslateblue;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+
+}
+
+section div.product-box p.namebook a:hover {
+    font-style: italic;
+}
+
+section div.product-box img.photo {
+    width: 115px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+section div.product-box p.bill {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+section div.product-box p.bill span.price {
+    font-weight: bold;
+    color: red;
+}
+
+section div.product-box button.buttonbuy {
+    font-size: 12px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background-color: orange;
+    display: block;
+    border-radius: 4px;
+
+
+}
+
+section div.container form {
+    border-radius: 4px;
+    margin-left: 100px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid rgb(187, 215, 243);
+    /* padding: 20px; */
+    width: 620px;
+    background-color: rgb(187, 215, 243);
+
+}
+
+section div.container form fieldset {
+    width: 550px;
+    padding: 10px 10px;
+}
+
+section div.container form fieldset table tr td {
+    /* margin-top: 25px;
+    margin-bottom: 25px; */
+    padding: 12px;
+}
+section div.container form fieldset table tr td label{
+    text-align: center;
+}
+
+section div.container form button.formbutton {
+    font-size: 17px;
+    padding: 5px;
+    margin-left: 150px;
+    margin-right: auto;
+    border: none;
+    background-color: rgb(106, 106, 255);
+    color: white;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.mybutton {
+    position: fixed;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    border: black solid 1px;
+    background-color: lightgreen;
+    bottom: 0px;
+    right: 10px;
+}
+
+footer {
+    clear: both;
+    background-color: rgb(101, 253, 146);
+    text-align: center;
+}

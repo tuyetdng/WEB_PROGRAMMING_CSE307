@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
+    <title>ABC BookStore</title>
+    <style>
+        img {
+            width: 250px;
+            height: 100px;
+        }
+    </style>
+</head>
+</head>
+
+<body>
+    <header>
+        <div class="hLeft">
+            <img src="Practice 3/img_Practice3/logoABCbook.png" alt="ABC logo" width="30%">
+        </div>
+        <div id="gNav"></div>
+
+        <div class="hRight">
+            <i class="fa-solid fa-user"></i><a href="login.html">Log in</a>
+            <a href="registration.html">Registration</a>
+            <i class="fa-solid fa-cart-shopping"></i><a class="last" href="#">Cart</a>
+        </div>
+        <div id="gNav"></div>
+    </header>
+
+    <nav>
+        <div class="hRight">
+            <input type="text" name="findBook" id="findBook" size="30%" placeholder="Find the title of the book">
+            <button type="submit">Find Books</button>
+        </div>
+        <div class="hLeft">
+            <ul class="hNav" type="disc">
+                <li><a href=""><span style="color: coral;"><strong>HOME PAGE</strong></span></a></li>
+                <li><a href="problem4_practice1.html"><span
+                            style="color: coral;"><strong>INTRODUCTION</strong></span></a></li>
+                <li class="last"><a href="#"><span style="color: coral;"><strong>CONTACT</strong></span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="gNav"></div>
+    <!-- ==================== -->
+
+    <div id="body">
+        <article>
+            <aside id="left">
+                <div>
+                    <p><b>BOOKS BY SUBJECT</b></p>
+                    <ul class="list">
+                        <li><a href="#">Foreign langue</a></li>
+                        <li><a href="#">Information technology</a></li>
+                        <li><a href="#">Law </a></li>
+                        <li><a href="#">Literature</a></li>
+                        <li><a href="#">Science and technology</a></li>
+                        <li><a href="#">Agriculture</a></li>
+                        <li><a href="#">History of geography</a></li>
+                        <li><a href="#">Economics</a></li>
+                        <li><a href="#">Listen to the song</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p><b>BOOKS BY PUBLISHER</b></p>
+                    <ul class="list">
+                        <li><a href="#">Young publishers</a></li>
+                        <li><a href="#">Statictics Publishing House</a></li>
+                        <li><a href="#">Bronze needle</a></li>
+                        <li><a href="#">National University</a></li>
+                        <li><a href="#">Artistic craft culture</a></li>
+                        <li><a href="#">Culture</a></li>
+                        <li><a href="#">History of geography</a></li>
+                        <li><a href="#">Labor-Society</a></li>
+                        <li><a href="#">Science & Engineering</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section>
+                <h3>MEMBER REGISTRATION</h3>
+                <div class="container">
+                    <form method="post" action="#" name="dangky">
+                        <center>
+                            <header><strong>MEMBER REGISTRATION</strong></header>
+                        </center>
+                        <fieldset>
+                            <legend><strong>Personal information</strong></legend>
+
+                            <table>
+                                <colgroup>
+                                    <col style="width: 50%;">
+                                    <col style="width: 50%;">
+                                </colgroup>
+                                <tr>
+                                    <td><label for="Fullname">Full name: </label></td>
+                                    <td><input type="text" name="Fullname" id="Fullname"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Birthday">Birthday: </label></td>
+                                    <td>
+                                        <select id="Birthday" name="Birthday">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+
+                                        <label for="Month">Month:</label>
+                                        <select id="Month" name="Month">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <label for="Year">Year:</label>
+                                        <input type="text" name="Year" id="Year" style="width: 90px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="Gender">Gender:</label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="Gender" id="Gender" value="Nam">
+                                        <label for="Gender">Male</label>
+                                        <input type="radio" name="Gender" id="Gender" value="Nu">
+                                        <label for="Gender">Female</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="Address">Address:</label>
+                                    </td>
+                                    <td><textarea name="Address" id="Address" cols="35" rows="3"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Telephone">Telephone: </label></td>
+                                    <td><input type="text" name="Telephone" id="Telephone" style="width: 270px;"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="email">Email: </label></td>
+                                    <td><input type="text" name="email" id="email" style="width: 270px;"
+                                            required="required" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>Credentials</strong></legend>
+                            <table>
+                                <colgroup>
+                                    <col style="width: 50%;">
+                                    <col style="width: 50%;">
+                                </colgroup>
+                                <tr>
+                                    <td><label for="Username">Username: </label></td>
+                                    <td><input type="text" name="Username" id="Username" style="width: 200px;"
+                                            required="required"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="password">Password: </label></td>
+                                    <td><input type="password" name="password" id="password" style="width: 200px;"
+                                            required="required">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="ConfirmPassword">Confirm Password: </label></td>
+                                    <td><input type="password" name="ConfirmPassword" id="ConfirmPassword"
+                                            style="width: 200px;" required="required"></td>
+                                </tr>
+
+                            </table>
+                        </fieldset>
+               
+                            <button type="submit" class="formbutton">Login</button>
+                            <button type="reset" class="formbutton">Cancel</button>
+
+                    </form>
+
+
+                </div>
+            </section>
+
+            <aside id="right">
+                <div id="bestseller">
+                    <h3><strong>BESTSELLER</strong></h3>
+                    <marquee direction="up" scrollamount="2" scrolldelay="5" onmousemove="stop()" onmouseout="start()">
+                        <p><a href="#"><img src="Practice 3/img_Practice3/EnglishForTech.jpg">Enlish for Tech</a></p>
+                    </marquee>
+                    <marquee direction="up" scrollamount="2" scrolldelay="5" onmousemove="stop()" onmouseout="start()">
+                        <p><a href="#"><img src="Practice 3/img_Practice3/BARC.png">BARC Computer Science</a></p>
+                    </marquee>
+                    <marquee direction="up" scrollamount="2" scrolldelay="5" onmousemove="stop()" onmouseout="start()">
+                        <p><a href="#"><img src="Practice 3/img_Practice3/Davinci.png">The Da Vinci Code</a></p>
+                    </marquee>
+                    <marquee direction="up" scrollamount="2" scrolldelay="5" onmousemove="stop()" onmouseout="start()">
+                        <p><a href="#"><img src="Practice 3/img_Practice3/harrypotter.png">Harry Potter</a></p>
+                    </marquee>
+                </div>
+                <div id="linkweb">
+                    <h3><strong>THE WEBSITE LINKS</strong></h3>
+                    <select name="link" id="link">
+                        <option value="opt" selected>---Select the linking page---</option>
+                        <option value="E_Lib"><a href="https://lib.eiu.edu.vn/">https://lib.eiu.edu.vn/</a></option>
+                        <option value="E_Uni"><a href="https://eiu.edu.vn/">https://eiu.edu.vn/</a></option>
+                    </select>
+                </div>
+                <div id="statistics">
+                    <h3><strong>ACCESS STATISTICS</strong></h3>
+                    <p><strong>Total Access: 500</strong></p>
+                    <p><strong>Online: 3</strong></p>
+                </div>
+            </aside>
+        </article>
+    </div>
+
+    <footer>
+        <p>©2016 - ABC BookStor.Allright Reserved</p>
+        <p>Website is developed to be used as a hands-on exercise in Web Programming</p>
+        <p>Email: abcbookstore@gmail.com</p>
+    </footer>
+
+    <button class="mybutton">^</button>
+
+    <script>
+        // document.getElementById('res').innerText =;
+    </script>
+</body>
+
+</html>

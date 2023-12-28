@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    <!-- SweetAlert -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    </link>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <title>ABC BookStore</title>
+    <style>
+        img {
+            width: 250px;
+            height: 100px;
+        }
+    </style>
+</head>
+</head>
+
+<body>
+    <header>
+        <div class="hLeft">
+            <img src="Practice 3/img_Practice3/logoABCbook.png" alt="ABC logo" width="30%">
+        </div>
+        <div id="gNav"></div>
+
+        <div class="hRight">
+            <i class="fa-solid fa-user"></i><a href="login.html">Log in</a>
+            <a href="registration.html">Registration</a>
+            <i class="fa-solid fa-cart-shopping"></i><a class="last" href="#">Cart</a>
+        </div>
+        <div id="gNav"></div>
+    </header>
+
+    <nav>
+        <!-- rounded-pill:bo góc -->
+        <div class="hRight">
+            <div class="btn-group">
+                <input type="text" name="findBook" id="findBook" size="30%" placeholder="Find the title of the book">
+                <button type="submit" class="btn btn-success">Find Book</button>
+            </div>
+        </div>
+        <div class="hLeft">
+            <div class="btn-group">
+                <button type="button" class="btn btn-success rounded-pill">HOME PAGE</button>
+                <button type="button" class="btn btn-success rounded-pill">INTRODUCTION</button>
+                <button type="button" class="btn btn-success rounded-pill">CONTRACT</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success rounded-pill dropdown-toggle"
+                        data-bs-toggle="dropdown">BOOKS BY
+                        SUBJECT</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Information technology</a></li>
+                        <li><a class="dropdown-item" href="#">Smartphone</a></li>
+                        <li><a class="dropdown-item" href="#">Law</a></li>
+                        <li><a class="dropdown-item" href="#">Literature</a></li>
+                        <li><a class="dropdown-item" href="#">Science ad technology</a></li>
+                        <li><a class="dropdown-item" href="#">Agriculture</a></li>
+                        <li><a class="dropdown-item" href="#">History of geography</a></li>
+                        <li><a class="dropdown-item" href="#">Economics</a></li>
+                        <li><a class="dropdown-item" href="#">Listen to the song</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="gNav"></div>
+    <!-- ==================== -->
+
+    <div id="body">
+        <article>
+            <aside id="left">
+                <div>
+                    <p><b>BOOKS BY SUBJECT</b></p>
+                    <ul class="list">
+                        <li><a href="#">Foreign langue</a></li>
+                        <li><a href="#">Information technology</a></li>
+                        <li><a href="#">Law </a></li>
+                        <li><a href="#">Literature</a></li>
+                        <li><a href="#">Science and technology</a></li>
+                        <li><a href="#">Agriculture</a></li>
+                        <li><a href="#">History of geography</a></li>
+                        <li><a href="#">Economics</a></li>
+                        <li><a href="#">Listen to the song</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p><b>BOOKS BY PUBLISHER</b></p>
+                    <ul class="list">
+                        <li><a href="#">Young publishers</a></li>
+                        <li><a href="#">Statictics Publishing House</a></li>
+                        <li><a href="#">Bronze needle</a></li>
+                        <li><a href="#">National University</a></li>
+                        <li><a href="#">Artistic craft culture</a></li>
+                        <li><a href="#">Culture</a></li>
+                        <li><a href="#">History of geography</a></li>
+                        <li><a href="#">Labor-Society</a></li>
+                        <li><a href="#">Science & Engineering</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section>
+                <div>
+                    <center>
+                        <form method="post" action="#" name="dangnhap" span style="border: 1px; background-color: rgb(213, 245, 255); width: 70%; border-radius: 8px;">
+                            <div style="width: 70%;  background-color: rgb(213, 245, 255); padding: 5px;">
+                                <div class="d-grid" style=" padding: 8px;">
+                                    <button type="button" class="btn btn-info btn-block"><strong>LOG IN</strong></button>
+                                </div>
+                                <div class="input-group mb-3" style=" padding-top: 8px;">
+                                    <span class="input-group-text">Username:</span>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter username">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">Password:</span>
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="Enter password">
+                                </div>
+                                <div class="btn-group">
+                                    <input type="button" class="btn btn-success" value="SIGN IN"
+                                        onclick="doValidation()">
+                                </div>
+                                <div>
+                                    <p>Not a member?<a href="#"><em>Đổi mật khẩu</em></a></p>
+                                    <a href="#"><em>Change Password</em></a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </center>
+                </div>
+
+            </section>
+
+            <aside id="right">
+                <div id="bestseller">
+                    <h3><strong>BESTSELLER</strong></h3>
+                    <marquee direction="up" scrollamount="2" scrolldelay="5" onmousemove="stop()" onmouseout="start()">
+                        <p><a href="#"><img src="Practice 3/img_Practice3/EnglishForTech.jpg">Enlish for Tech</a></p>
+                    </marquee>
+                    <marquee direction="up" scrollamount="2" scrolldelay="5" onmousemove="stop()" onmouseout="start()">
+                        <p><a href="#"><img src="Practice 3/img_Practice3/BARC.png">BARC Computer Science</a></p>
+                    </marquee>
+                    <marquee direction="up" scrollamount="2" scrolldelay="5" onmousemove="stop()" onmouseout="start()">
+                        <p><a href="#"><img src="Practice 3/img_Practice3/Davinci.png">The Da Vinci Code</a></p>
+                    </marquee>
+                    <marquee direction="up" scrollamount="2" scrolldelay="5" onmousemove="stop()" onmouseout="start()">
+                        <p><a href="#"><img src="Practice 3/img_Practice3/harrypotter.png">Harry Potter</a></p>
+                    </marquee>
+                </div>
+                <div id="linkweb">
+                    <h3><strong>THE WEBSITE LINKS</strong></h3>
+                    <select name="link" id="link">
+                        <option value="opt" selected>---Select the linking page---</option>
+                        <option value="E_Lib"><a href="https://lib.eiu.edu.vn/">https://lib.eiu.edu.vn/</a></option>
+                        <option value="E_Uni"><a href="https://eiu.edu.vn/">https://eiu.edu.vn/</a></option>
+                    </select>
+                </div>
+                <div id="statistics">
+                    <h3><strong>ACCESS STATISTICS</strong></h3>
+                    <p><strong>Total Access: 500</strong></p>
+                    <p><strong>Online: 3</strong></p>
+                </div>
+            </aside>
+        </article>
+    </div>
+
+    <footer>
+        <p>©2016 - ABC BookStor.Allright Reserved</p>
+        <p>Website is developed to be used as a hands-on exercise in Web Programming</p>
+        <p>Email: abcbookstore@gmail.com</p>
+    </footer>
+
+    <script>
+        function doValidation() {
+            const name = document.getElementById('name').value;
+            const password = document.getElementById('password').value;
+            if (!name || !password) {
+                swal("Check Information", "Please enter complete infomation");
+                return
+            }
+        }
+    </script>
+</body>
+
+</html>
